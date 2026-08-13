@@ -1,0 +1,7 @@
+model\IzlozbaHasUmetnikPK.class
+model\Umetnik.class
+model\Narudzbina.class
+model\IzlozbaHasUmetnik.class
+model\Korisnik.class
+model\Slika.class
+model\Izlozba.class

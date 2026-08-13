@@ -1,0 +1,13 @@
+1776262485027	Copy file
+1776264786836	Delete element
+1776267219206	Rename resource 'index.jsp'
+1776271060455	Copy file
+1776278829163	Rename field 'briografija'
+1776349243202	Copy file
+1776351544307	Move 'paintings' to 'static'
+1776355359829	Encapsulate field 'umetnikIds, ...'
+1776355512413	Delete element
+1776368206899	Copy compilation unit
+1776368236137	Encapsulate field 'umetnici, ...'
+1776445264578	Copy file
+1776445898001	Rename type 'KolokvijumServis'

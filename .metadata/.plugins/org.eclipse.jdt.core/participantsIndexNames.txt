@@ -1,0 +1,5 @@
+INDEX VERSION 1.134
+D:\Programiranje\faks\RIS\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4279641171.index
+\GalerijaWeb\src\main\java
+D:\Programiranje\faks\RIS\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3780433719.index
+\PozoristeWeb\src\main\java

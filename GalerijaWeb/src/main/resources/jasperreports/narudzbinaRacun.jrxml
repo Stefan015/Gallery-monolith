@@ -1,0 +1,183 @@
+<!-- Created with Jaspersoft Studio version 7.0.6.final using JasperReports Library version 7.0.6-5d2a603fdc6b3db8f842a83383e594f41891534d  -->
+<jasperReport name="narudzbina" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="9435da4a-5021-4f37-b3ed-ea76a3f4d1a7">
+	<parameter name="ukupnaCena" class="java.lang.Integer"/>
+	<parameter name="datum" class="java.util.Date"/>
+	<parameter name="korisnik" class="java.lang.String"/>
+	<query language="sql"><![CDATA[]]></query>
+	<field name="ime" class="java.lang.String"/>
+	<field name="tehnika" class="java.lang.String"/>
+	<field name="umetnik.ime" class="java.lang.String"/>
+	<field name="cena" class="java.lang.Integer"/>
+	<variable name="brojSlika" calculation="DistinctCount" class="java.lang.Integer">
+		<expression><![CDATA[$F{ime}]]></expression>
+	</variable>
+	<group name="SlikePoUmetniku">
+		<expression><![CDATA[$F{umetnik.ime}]]></expression>
+		<groupHeader>
+			<band height="33">
+				<element kind="staticText" uuid="96acee61-9729-419e-81fb-0291fd61a08e" x="140" y="3" width="120" height="30" fontName="Times New Roman" fontSize="12.0" hTextAlign="Center" vTextAlign="Middle">
+					<text><![CDATA[Tehnika]]></text>
+					<box>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+				</element>
+				<element kind="staticText" uuid="c4cb104e-d423-4b80-aeca-c98c6db151d0" x="260" y="3" width="120" height="30" fontName="Times New Roman" fontSize="12.0" hTextAlign="Center" vTextAlign="Middle">
+					<text><![CDATA[Umetnik]]></text>
+					<box>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+				</element>
+				<element kind="staticText" uuid="87d13cec-f44f-49d3-9dc7-87b04f1182d2" x="443" y="3" width="77" height="30" fontName="Times New Roman" fontSize="12.0" hTextAlign="Left" vTextAlign="Bottom">
+					<text><![CDATA[Cena slike]]></text>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+				</element>
+				<element kind="staticText" uuid="86c5c705-7f06-4a93-a3db-2d81737a8605" x="20" y="3" width="120" height="30" fontName="Times New Roman" fontSize="12.0" hTextAlign="Center" vTextAlign="Middle">
+					<text><![CDATA[Naziv Slike]]></text>
+					<box>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+				</element>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band/>
+		</groupFooter>
+	</group>
+	<background splitType="Stretch"/>
+	<title height="35" splitType="Stretch"/>
+	<pageHeader height="63" splitType="Stretch">
+		<element kind="textField" uuid="a9f09418-6a94-4fb6-bbae-e3b0854d7d0d" x="10" y="16" width="550" height="9">
+			<expression><![CDATA["Text Field"]]></expression>
+			<box bottomPadding="0">
+				<pen lineStyle="Dotted"/>
+				<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				<bottomPen lineWidth="1.0" lineStyle="Dotted" lineColor="#000000"/>
+				<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+			</box>
+		</element>
+		<element kind="staticText" uuid="103de74f-ad83-498c-82fa-e14777a2add4" x="20" y="30" width="60" height="30" fontName="Times New Roman" fontSize="12.0">
+			<text><![CDATA[Datum:]]></text>
+		</element>
+		<element kind="textField" uuid="200991cc-9752-4478-8050-0fd30a6167ff" x="10" y="41" width="550" height="9">
+			<expression><![CDATA["Text Field"]]></expression>
+			<box bottomPadding="0">
+				<pen lineStyle="Dotted"/>
+				<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				<bottomPen lineWidth="1.0" lineStyle="Dotted" lineColor="#000000"/>
+				<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+			</box>
+		</element>
+		<element kind="textField" uuid="b9442fa0-840b-4a17-a36c-9dbfac2ffe44" x="60" y="30" width="100" height="30" fontName="Times New Roman" fontSize="12.0">
+			<expression><![CDATA[$P{datum}]]></expression>
+		</element>
+		<element kind="staticText" uuid="6d070e00-66ec-496c-bfa9-8027242587e1" positionType="FixRelativeToBottom" x="206" y="-46" width="159" height="54" fontName="Times New Roman" fontSize="20.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[Galerija Racun]]></text>
+		</element>
+	</pageHeader>
+	<columnHeader splitType="Stretch"/>
+	<detail>
+		<band height="36" splitType="Stretch">
+			<element kind="textField" uuid="2817401d-d971-405b-ac72-8c2c0499763b" x="20" y="0" width="120" height="33" fontName="Times New Roman" fontSize="10.0" vTextAlign="Bottom">
+				<expression><![CDATA[$F{ime}]]></expression>
+				<box leftPadding="2" bottomPadding="2" rightPadding="2">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+			</element>
+			<element kind="textField" uuid="d75c919e-b6b9-416d-9d97-c7f6538a954a" x="444" y="13" width="76" height="20" fontName="Times New Roman" fontSize="12.0" vTextAlign="Bottom">
+				<expression><![CDATA[$F{cena}+" €"]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="fdaf6589-2492-470e-bf55-0658c75488f5"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+			</element>
+			<element kind="textField" uuid="0764397a-4ea7-40b4-8602-18b2886522fc" x="380" y="24" width="62" height="9">
+				<expression><![CDATA["Text Field"]]></expression>
+				<box bottomPadding="0">
+					<pen lineStyle="Dotted"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dotted" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+			</element>
+			<element kind="textField" uuid="71159f23-3d6a-4db5-8032-0fed185b480a" x="260" y="0" width="120" height="33" fontName="Times New Roman" fontSize="10.0" vTextAlign="Bottom">
+				<expression><![CDATA[$F{umetnik.ime}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="796c83a4-d716-43fe-9d49-2ac85192b1cd"/>
+				<box leftPadding="2" bottomPadding="2" rightPadding="2">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+			</element>
+			<element kind="textField" uuid="1fb98e98-6a15-4a07-bfc5-a7f70a8823ff" x="140" y="0" width="120" height="33" fontName="Times New Roman" fontSize="10.0" vTextAlign="Bottom">
+				<expression><![CDATA[$F{tehnika}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="bad4b5b9-6b4b-40c9-b4c3-98b401260f33"/>
+				<box leftPadding="2" bottomPadding="2" rightPadding="2">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+			</element>
+		</band>
+	</detail>
+	<columnFooter splitType="Stretch"/>
+	<pageFooter height="36" splitType="Stretch">
+		<element kind="textField" uuid="b7e8d0d7-61ac-4073-a31f-5847c4396fe8" x="235" y="3" width="100" height="30" fontName="Times New Roman" fontSize="12.0" hTextAlign="Center" vTextAlign="Middle">
+			<expression><![CDATA[$V{PAGE_NUMBER}]]></expression>
+		</element>
+	</pageFooter>
+	<summary height="77" splitType="Stretch">
+		<element kind="textField" uuid="02235539-33f3-4266-a642-1319af39e1f3" x="443" y="0" width="100" height="30" fontName="Times New Roman" fontSize="15.0" vTextAlign="Bottom">
+			<expression><![CDATA[$P{ukupnaCena}+" €"]]></expression>
+		</element>
+		<element kind="staticText" uuid="945a401c-e593-4429-af27-10c32568ae9a" x="20" y="0" width="100" height="30" fontName="Times New Roman" fontSize="15.0" vTextAlign="Bottom">
+			<text><![CDATA[Ukupno]]></text>
+		</element>
+		<element kind="textField" uuid="82d6be78-0f2e-4a8f-866c-849155818313" x="443" y="40" width="100" height="30" fontName="Times New Roman" fontSize="12.0" vTextAlign="Bottom">
+			<expression><![CDATA[$V{brojSlika}]]></expression>
+		</element>
+		<element kind="textField" uuid="3d5c9fb4-03fa-445a-a3dd-f2041ead8afe" x="80" y="40" width="100" height="30" fontName="Times New Roman" fontSize="12.0" vTextAlign="Bottom">
+			<expression><![CDATA[$P{korisnik}]]></expression>
+		</element>
+		<element kind="staticText" uuid="825e945f-e245-483f-8949-52b6e16eaa33" x="20" y="40" width="60" height="30" fontName="Times New Roman" fontSize="12.0" vTextAlign="Bottom">
+			<text><![CDATA[Ime kupca:]]></text>
+		</element>
+		<element kind="textField" uuid="3f834384-c9b0-4caf-a570-64ab8074ae64" x="70" y="21" width="372" height="9">
+			<expression><![CDATA["Text Field"]]></expression>
+			<box bottomPadding="0">
+				<pen lineStyle="Dotted"/>
+				<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				<bottomPen lineWidth="1.0" lineStyle="Dotted" lineColor="#000000"/>
+				<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+			</box>
+		</element>
+		<element kind="staticText" uuid="2d643708-f09f-4482-96ba-3729ad98857d" x="348" y="40" width="94" height="30" fontName="Times New Roman" fontSize="12.0" vTextAlign="Bottom">
+			<text><![CDATA[Ukupan broj slika]]></text>
+		</element>
+	</summary>
+</jasperReport>

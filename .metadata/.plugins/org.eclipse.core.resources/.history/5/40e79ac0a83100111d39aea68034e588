@@ -1,0 +1,22 @@
+package com.example.demo.services;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.demo.repository.KorisnikRepository;
+
+import model.Korisnik;
+
+@Service
+public class KorisnikService {
+
+	@Autowired
+	KorisnikRepository KorisnikRepo; 
+	
+	public void RegisterUser(KorisnikDTO) {
+		List<Korisnik> lista = KorisnikRepo.findAll();
+		
+	}
+}
